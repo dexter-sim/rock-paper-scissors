@@ -1,0 +1,38 @@
+* {
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    margin: 5px;
+}
+
+.options {
+    display: flex;
+    margin-left: 25%;
+    margin-right: 25%;
+    justify-content: space-between;
+}
+
+.one {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.one .scoreboard {
+    display: flex;
+}
+.scoreboard .name {
+    flex: 2;
+    order: 1;
+}
+.scoreboard .score {
+    flex: 1;
+    order: 2;
+}
+
+.message {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10px;
+    text-align: center;
+}
