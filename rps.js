@@ -11,26 +11,27 @@ function computerPlay(){
 function playRound(playerSelect, comSelect){
     const p = playerSelect;
     const c = comSelect;
-    document.getElementById("cpu").innerHTML = "Computer picked " + c + ".";
+    document.getElementById("m1").innerHTML = "Computer picked " + c + ".";
     if (p === c){
         console.log("Tie!");
+        document.getElementById("m2").innerHTML = "Draw!";
     } else if ((p === "Scissors" && c === "Paper") || 
                 (p === "Paper" && c === "Rock") ||
                 (p === "Rock" && c === "Scissors")){
         console.log("Win!");
         document.getElementById("pscore").innerHTML = ++player_score;
         const text = "Win! " + playerSelect + " beats " + comSelect + "!"; 
-        document.getElementById("outcome").innerHTML = text;
+        document.getElementById("m2").innerHTML = text;
     } else {
         console.log("Lose!");
         document.getElementById("comscore").innerHTML = ++com_score;
         const text = "Lose. " + playerSelect + " loses to " + comSelect + ".";
-        document.getElementById("outcome").innerHTML = text;
+        document.getElementById("m2").innerHTML = text;
     }
     if (com_score === 5){
-        document.getElementById("final").innerHTML = "Computer won. Press any button to reset.";
+        document.getElementById("m3").innerHTML = "Computer won. Press any button to reset.";
     } else if (player_score === 5){
-        document.getElementById("final").innerHTML = "You won. Press any button to reset.";
+        document.getElementById("m3").innerHTML = "You won. Press any button to reset.";
     }
 }
 
@@ -38,9 +39,9 @@ function check5(){
     if (com_score === 5 || player_score === 5){
         player_score = 0;
         com_score = 0;
-        document.getElementById("final").innerHTML = "";
-        document.getElementById("outcome").innerHTML = "";
-        document.getElementById("cpu").innerHTML = "Play the game!"
+        document.getElementById("m3").innerHTML = "";
+        document.getElementById("m2").innerHTML = "";
+        document.getElementById("m1").innerHTML = "Play the game!"
         document.getElementById("pscore").innerHTML = player_score;
         document.getElementById("comscore").innerHTML = com_score;
         return true;
