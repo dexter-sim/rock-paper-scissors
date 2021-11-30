@@ -8,31 +8,43 @@
     </head>
 
     <body>
-        <h2>Rock Paper Scissors Game</h2>
-        
-        <div class="one">
-            <div class="scoreboard"><h3>First to 5 points wins!</h3></div>
-            <div class="scoreboard">
-                <div class="name"><p>Player Score</p></div>
-                <div class="score"><p id="pscore">0</p></div>
-            </div>
-            <div class="scoreboard">
-                <div class="name"><p>Computer Score</p></div>
-                <div class="score"><p id="comscore">0</p></div>
+        <div class="intro">
+            <h1 style="font-size: 40px;">Wand - Bow - Sword</h1>
+            <div class="rules">
+                <p>Wand beats Bow</p>
+                <p>Bow beats Sword</p>
+                <p>Sword beats Wand</p>
             </div>
         </div>
-
-
+       
         <div class="options">
-            <button id="rock">Rock</button>
-            <button id="paper">Paper</button>
-            <button id="scissors">Scissors</button>
+            <button id="rock"><img src="images/magic-wand.png" alt="Wand"></button>
+            <button id="paper"><img src="images/bow-and-arrow.png" alt="Bow"></button>
+            <button id="scissors"><img src="images/sword.png" alt="Sword"></button>
         </div>
 
-        <div class="message">
-            <p id="m1">Play the game!</p>
-            <p id="m2"></p>
-            <p id="m3"></p>
+        <div class="scoreboard">
+            <div class='com'>
+                <p id="wpn">Battle!</p>
+                <img id="wpn-pic" src="images/war.png" alt="Enemy Weapon Image">
+            </div>
+            <div class="details">
+                <p id="round">Round: 0</p>
+                <p id="player">Your Score: 0</p>
+                <p id="computer">Enemy's Score: 0</p>
+                <p id="combat">Combat Area: Empty</p>
+            </div>
+        </div>
+        
+        <div class="ending">
+            <h2 id="message"></h2>
+            <p id="reset"></p>
+        </div>
+
+        
+        <div class="footer">
+            <p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+            <p>Game made by Dexter</p>
         </div>
     </body>
 

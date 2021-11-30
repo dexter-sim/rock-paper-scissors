@@ -1,38 +1,86 @@
 * {
     font-size: 20px;
     font-family: Roboto, sans-serif;
-    margin: 5px;
+    margin: 10px;
+    font-family: Luminari, fantasy, Trattatello, fantasy, Roboto, sans-serif;
+    background-color: whitesmoke;
+}
+
+.options img {
+    width: 120px;
+    height: 120px;
+}
+.com img {
+    margin-top: 15%;
+    width: 100px;
+    height: 100px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    transition-duration: 0.7s;
+}
+
+button:hover{
+    filter: hue-rotate(180deg);
+    -webkit-filter: hue-rotate(180deg);
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro .rules {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .options {
     display: flex;
-    margin-left: 25%;
-    margin-right: 25%;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: space-evenly;
+    border: grey solid;
+    border-width: 4px;
+    border-radius: 10px;
+    min-width: 450px;
 }
 
-.one {
+.scoreboard {
     display: flex;
-    flex-direction: column;
-    margin-left: 25%;
-    margin-right: 25%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: grey solid;
+    border-radius: 10px;
 }
 
-.one .scoreboard {
-    display: flex;
-}
-.scoreboard .name {
-    flex: 2;
-    order: 1;
-}
-.scoreboard .score {
+.scoreboard .com {
     flex: 1;
+    order: 1;
+    text-align: center;
+    border-right: grey solid;
+}
+
+.scoreboard .details {
+    flex: 3;
     order: 2;
 }
 
-.message {
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 10px;
+.ending {
     text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
 }
