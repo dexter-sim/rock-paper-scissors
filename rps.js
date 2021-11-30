@@ -37,7 +37,7 @@ function playRound(playerSelect, comSelect){
         console.log("Win!");
         outcome = 1;
         document.getElementById("player").textContent = "Your Score: " + JSON.stringify(++player_score);
-        document.getElementById("combat").textContent = "Combat: You shot a direct hit before the enemy got close enough to strike at you. You gained a score."; 
+        document.getElementById("combat").textContent = "Combat: You shot a direct hit with your bow before the enemy got close enough to strike at you. You gained a score."; 
     } else if (p === "Sword" && c === "Wand"){
         console.log("Win!");
         outcome = 1;
@@ -47,17 +47,17 @@ function playRound(playerSelect, comSelect){
         console.log("Lose!");
         outcome = 2;
         document.getElementById("computer").textContent = "Enemy's Score: " + JSON.stringify(++com_score);
-        document.getElementById("combat").textContent = "Combat: While conjuring a fireball, the enemy landed a hit on you with his mighty sword. Enemy gained a score";
+        document.getElementById("combat").textContent = "Combat: While conjuring a fireball, the enemy landed a hit on you with his mighty sword. Enemy gained a score.";
     } else if (p === "Bow" && c === "Wand"){
         console.log("Lose!");
         outcome = 2;
         document.getElementById("computer").textContent = "Enemy's Score: " + JSON.stringify(++com_score);
-        document.getElementById("combat").textContent = "Combat: The enemy casted illusions. You got striked before you can identify the real copy. Enemy gained a score";
+        document.getElementById("combat").textContent = "Combat: The enemy casted illusions. You got striked before you can identify the real copy. Enemy gained a score.";
     } else {
         console.log("Lose!");
         outcome = 2;
         document.getElementById("computer").textContent = "Enemy's Score: " + JSON.stringify(++com_score);
-        document.getElementById("combat").textContent = "Combat: The enemy rained arrows upon you from range, rendering your melee weapon useless. Enemy gained a score"; 
+        document.getElementById("combat").textContent = "Combat: The enemy rained arrows upon you from range, rendering your melee weapon useless. Enemy gained a score."; 
     }
     if (outcome === 0){
         document.getElementsByClassName("scoreboard")[0].style.border = "skyblue solid";
@@ -89,6 +89,7 @@ function check5(){
         document.getElementById("round").textContent = "Round: 0";
         document.getElementById("message").textContent = "";
         document.getElementById("reset").textContent = "";
+        document.getElementById("combat").textContent = "Combat: Empty"
         document.getElementById("wpn").textContent = "Battle!";
         document.getElementById("wpn-pic").src = "images/war.png";
         document.getElementsByClassName("scoreboard")[0].style.border = "grey solid";
