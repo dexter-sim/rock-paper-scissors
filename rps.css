@@ -20,10 +20,12 @@ button {
     border: none;
     transition-duration: 0.7s;
 }
-
-button:hover{
+button:hover {
     filter: hue-rotate(180deg);
     -webkit-filter: hue-rotate(180deg);
+}
+button:active {
+    transform: scale(0.925);
 }
 
 .intro {
