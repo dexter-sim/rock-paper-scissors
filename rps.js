@@ -19,6 +19,8 @@ function resetGame(){
     player_score = 0;
     com_score = 0;
     round = 0;
+    resetButton.style.transitionDuration = "0s";
+    resetButton.style.visibility = "hidden";
     playerScore.textContent = "Your Score: 0";
     enemyScore.textContent = "Enemy's Score: 0";
     roundNumber.textContent = "Round: 0";
@@ -44,7 +46,8 @@ function playRound(playerSelect, comSelect){
     let outcome = 0;
     round++;
     roundNumber.textContent = "Round: " + JSON.stringify(round);
-    document.getElementById("wpn").textContent = "Enemy's Weapon";
+    warcry.textContent = "Enemy's Weapon";
+    
     if (c === "Wand"){
         enemypic.src = "images/magic-wand.png";
     } else if (c === "Bow"){
@@ -97,12 +100,18 @@ function playRound(playerSelect, comSelect){
         innerColor[0].style.borderRight = "lightcoral solid";
     }
     
-    if (com_score === 5){
-        ending.textContent = "You Lost The Battle!";
-        resetButton.textContent = "Press here to fight again."
-    } else if (player_score === 5){
-        ending.textContent = "You Won The Battle!";
-        resetButton.textContent = "Press here to fight again."
+    if (player_score === 5 || com_score === 5){
+        resetButton.textContent = "Press here to fight again"
+        resetButton.style.borderRadius = "6px";
+        resetButton.style.visibility = "visible";
+        resetButton.style.transitionDuration = "0.5s";
+        if (player_score === 5){
+            ending.textContent = "You Won The Battle!";
+            resetButton.style.border = "2px green solid";
+        } else {
+            ending.textContent = "You Lost The Battle!";
+            resetButton.style.border = "2px lightcoral solid";
+        }
     }
 }
 

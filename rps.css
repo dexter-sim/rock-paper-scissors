@@ -18,9 +18,9 @@
 button {
     background-color: transparent;
     border: none;
-    transition-duration: 0.7s;
+    transition-duration: 0.5s;
 }
-button:hover {
+#rock:hover, #paper:hover, #scissors:hover {
     filter: hue-rotate(180deg);
     -webkit-filter: hue-rotate(180deg);
 }
@@ -77,6 +77,13 @@ button:active {
 
 .ending {
     text-align: center;
+}
+
+#reset {
+    padding: 8px;
+}
+#reset:hover {
+    background-color: lightgray;
 }
 
 .footer {
